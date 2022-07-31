@@ -9,6 +9,5 @@ if __name__ == "__main__":
     ui = ui_style.Ui_MainWindow()
     ui.setupUi(MainWindow)
     ui_chart.setChart(ui.graphicsView)
-    ui_chart.setChart(ui.graphicsView_2)
     MainWindow.show()
     sys.exit(app.exec_())
