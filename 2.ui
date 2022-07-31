@@ -250,27 +250,27 @@ QSlider::handle:vertical:pressed {
         <number>0</number>
        </property>
        <item>
-        <widget class="QFrame" name="frame_leftmenu">
+        <widget class="QCustomSlideMenu" name="widget_leftmenu" native="true">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>721</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>100</width>
+           <width>16777215</width>
            <height>16777215</height>
           </size>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(40, 44, 52);</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <property name="spacing">
@@ -289,30 +289,13 @@ QSlider::handle:vertical:pressed {
            <number>0</number>
           </property>
           <item>
-           <widget class="QFrame" name="frame_3">
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+           <widget class="QFrame" name="frame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <widget class="QPushButton" name="pushButton">
-             <property name="geometry">
-              <rect>
-               <x>130</x>
-               <y>80</y>
-               <width>75</width>
-               <height>24</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>PushButton</string>
-             </property>
-            </widget>
-           </widget>
-          </item>
-          <item>
-           <widget class="QFrame" name="frame_4">
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -320,62 +303,182 @@ QSlider::handle:vertical:pressed {
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_2">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
-              <widget class="QPushButton" name="pushButton_6">
-               <property name="text">
-                <string>数据概览</string>
+              <widget class="QFrame" name="frame_3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
                </property>
-               <property name="icon">
-                <iconset resource="files.qrc">
-                 <normaloff>:/20x20/icons/20x20/cil-list.png</normaloff>:/20x20/icons/20x20/cil-list.png</iconset>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
                </property>
-               <property name="iconSize">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
                </property>
               </widget>
              </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_2">
-               <property name="text">
-                <string>PushButton</string>
+             <item alignment="Qt::AlignVCenter">
+              <widget class="QFrame" name="frame_4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
                </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_8">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="Btn_1">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>PushButton</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="Btn_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>PushButton</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="Btn_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>PushButton</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="Btn_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>PushButton</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="Btn_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>PushButton</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_3">
-               <property name="text">
-                <string>PushButton</string>
+              <widget class="QFrame" name="frame_5">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
                </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_5">
-               <property name="text">
-                <string>PushButton</string>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
                </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_4">
-               <property name="text">
-                <string>PushButton</string>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
                </property>
               </widget>
              </item>
             </layout>
-           </widget>
-          </item>
-          <item>
-           <widget class="QFrame" name="frame_5">
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
            </widget>
           </item>
          </layout>
@@ -399,6 +502,21 @@ QSlider::handle:vertical:pressed {
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
           <item>
            <widget class="QFrame" name="frame_top">
             <property name="frameShape">
@@ -408,6 +526,21 @@ QSlider::handle:vertical:pressed {
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
               <widget class="QFrame" name="frame_9">
                <property name="frameShape">
@@ -417,8 +550,23 @@ QSlider::handle:vertical:pressed {
                 <enum>QFrame::Raised</enum>
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item>
-                 <widget class="QPushButton" name="pushButton_7">
+                 <widget class="QPushButton" name="Btn_toggle">
                   <property name="styleSheet">
                    <string notr="true">QPushButton {	
 	border: none;
@@ -457,7 +605,7 @@ QPushButton:pressed {
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame">
+              <widget class="QFrame" name="frame_header">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -465,6 +613,21 @@ QPushButton:pressed {
                 <enum>QFrame::Raised</enum>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_5">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item alignment="Qt::AlignHCenter">
                  <widget class="QLabel" name="label_4">
                   <property name="text">
@@ -475,7 +638,7 @@ QPushButton:pressed {
                </layout>
               </widget>
              </item>
-             <item>
+             <item alignment="Qt::AlignTop">
               <widget class="QFrame" name="frame_2">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
@@ -484,6 +647,21 @@ QPushButton:pressed {
                 <enum>QFrame::Raised</enum>
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QPushButton" name="Btn_minimize">
                   <property name="styleSheet">
@@ -593,8 +771,8 @@ QPushButton:pressed {
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_3">
              <item>
-              <widget class="QStackedWidget" name="stackedWidget">
-               <widget class="QWidget" name="page"/>
+              <widget class="QCustomStackedWidget" name="stackedWidget">
+               <widget class="QWidget" name="page_1"/>
                <widget class="QWidget" name="page_2">
                 <layout class="QVBoxLayout" name="verticalLayout_6">
                  <item>
@@ -727,6 +905,18 @@ QPushButton:pressed {
    <class>QChartView</class>
    <extends>QGraphicsView</extends>
    <header>qchartview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QCustomStackedWidget</class>
+   <extends>QStackedWidget</extends>
+   <header>Custom_Widgets.Widgets.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QCustomSlideMenu</class>
+   <extends>QWidget</extends>
+   <header>Custom_Widgets.Widgets.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>

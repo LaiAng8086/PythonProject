@@ -1,0 +1,130 @@
+{
+    "QMainWindow": [
+        {
+            "title": "Data analysis",
+            "icon": "F:/PythonProject/icons/24x24/cli-check-circle.png",
+            "frameless": true,
+            "transluscentBg": true,
+            "shadow": [
+                {
+                    "color": "#fff",
+                    "blurRadius": 20,
+                    "xOffset": 0,
+                    "yOffset": 0,
+                    "centralWidget": "centralwidget"
+                }
+            ],
+            "navigation": [
+                {
+                    "minimize": "Btn_minimize",
+                    "close": "Btn_close",
+                    "restore": [
+                        {
+                            "buttonName": "Btn_maximize",
+                            "normalIcon": "F:/PythonProject/icons/24x24/cli-window-restore.png",
+                            "maximizedIcon": "F:/PythonProject/icons/24x24/cli-window-maximize.png"
+                        }
+                    ],
+                    "moveWindow": "frame_header",
+                    "tittleBar": "frame_header"
+                }
+            ]
+        }
+    ],
+    "QStackedWidget": [
+        {
+            "name": "stackedWidget",
+            "transitionAnimation": [
+                {
+                    "fade": [
+                        {
+                            "active": true,
+                            "duration": 1000,
+                            "easingCurve": "OutBack"
+                        }
+                    ],
+                    "slide": [
+                        {
+                            "active": true,
+                            "duration": 1000,
+                            "direction": "horizontal",
+                            "easingCurve": "OutBack"
+                        }
+                    ]
+                }
+            ],
+            "navigation": [
+                {
+                    "navigationButtons": [
+                        {
+                            "Btn_1": "page_1",
+                            "Btn_2": "page_2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "QCustomSlideMenu": [
+        {
+            "name": "widget_leftmenu",
+            "defaultSize": [
+                {
+                    "width": 0,
+                    "height": "parent"
+                }
+            ],
+            "collapsedSize": [
+                {
+                    "width": 0,
+                    "height": "parent"
+                }
+            ],
+            "expandedSize": [
+                {
+                    "width": 200,
+                    "height": "parent"
+                }
+            ],
+            "toggleButton": [
+                {
+                    "buttonName": "Btn_toggle",
+                    "icons": [
+                        {
+                            "whenMenuIsCollapsed": "F:/PythonProject/icons/24x24/cli-menu.png",
+                            "whenMenuIsExpanded": "F:/PythonProject/icons/24x24/cli-arrow-circle-left.png"
+                        }
+                    ],
+                    "style": [
+                        {
+                            "whenMenuIsCollapsed": [
+                                "border: 2px solid transparent"
+                            ],
+                            "whenMenuIsExpanded": [
+                                "border: 2px solid rgb(9, 5, 13)"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "menuTransitionAnimation": [
+                {
+                    "animationDuration": 2000,
+                    "animationEasingCurve": "Linear",
+                    "whenCollapsing": [
+                        {
+                            "animationDuration": 500,
+                            "animationEasingCurve": "Linear"
+                        }
+                    ],
+                    "whenExpanding": [
+                        {
+                            "animationDuration": 500,
+                            "animationEasingCurve": "OutInBack"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
