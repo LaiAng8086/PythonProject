@@ -1,7 +1,7 @@
 {
     "qtForPython.designer.path": "F:\\Anaconda3\\envs\\pyside2\\Scripts\\pyside2-designer.exe",
     "qtForPython.rcc.args": [
-        "-o ${fileDirname}/files_rc.py -g python ${file}"
+        "-o ${fileDirname}/${fileBasenameNoExtension}_rc.py -g python ${file}"
     ],
     "qtForPython.uic.args": [
         "-o ${fileDirname}/ui_style.py -g python ${file}"
