@@ -849,7 +849,7 @@ QPushButton:pressed {
              <item>
               <widget class="QCustomStackedWidget" name="stackedWidget">
                <property name="currentIndex">
-                <number>2</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="page_1">
                 <layout class="QGridLayout" name="gridLayout_2">
@@ -1512,7 +1512,7 @@ QPushButton:pressed {
                        <item row="0" column="1" alignment="Qt::AlignHCenter">
                         <widget class="QLabel" name="label_6">
                          <property name="text">
-                          <string>学年</string>
+                          <string>Class</string>
                          </property>
                         </widget>
                        </item>
@@ -1526,14 +1526,14 @@ QPushButton:pressed {
                        <item row="0" column="0" alignment="Qt::AlignHCenter">
                         <widget class="QLabel" name="label_5">
                          <property name="text">
-                          <string>班级</string>
+                          <string>Academic Year</string>
                          </property>
                         </widget>
                        </item>
                        <item row="0" column="2" alignment="Qt::AlignHCenter">
                         <widget class="QLabel" name="label_7">
                          <property name="text">
-                          <string>性别</string>
+                          <string>Factor</string>
                          </property>
                         </widget>
                        </item>
@@ -1566,7 +1566,7 @@ QPushButton:pressed {
                       </property>
                       <layout class="QHBoxLayout" name="horizontalLayout_7">
                        <item>
-                        <widget class="QChartView" name="graphicsView"/>
+                        <widget class="QChartView" name="pg2_gv1"/>
                        </item>
                       </layout>
                      </widget>

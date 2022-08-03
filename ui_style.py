@@ -11,7 +11,6 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
-
 from PySide2.QtCharts import QtCharts
 from Custom_Widgets.Widgets import QCustomStackedWidget
 from Custom_Widgets.Widgets import QCustomSlideMenu
@@ -943,10 +942,10 @@ class Ui_MainWindow(object):
         self.frame_8.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_7 = QHBoxLayout(self.frame_8)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
-        self.graphicsView = QtCharts.QChartView(self.frame_8)
-        self.graphicsView.setObjectName(u"graphicsView")
+        self.pg2_gv1 = QtCharts.QChartView(self.frame_8)
+        self.pg2_gv1.setObjectName(u"pg2_gv1")
 
-        self.horizontalLayout_7.addWidget(self.graphicsView)
+        self.horizontalLayout_7.addWidget(self.pg2_gv1)
 
 
         self.verticalLayout_7.addWidget(self.frame_8)
@@ -1184,7 +1183,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1219,10 +1218,10 @@ class Ui_MainWindow(object):
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Grade", None))
         self.label_18.setText(QCoreApplication.translate("MainWindow", u"Online Resources", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Birth Place", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"\u5b66\u5e74", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Class", None))
         self.pushButton_8.setText(QCoreApplication.translate("MainWindow", u"\u751f\u6210", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"\u73ed\u7ea7", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"\u6027\u522b", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Academic Year", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Factor", None))
         self.pushButton_9.setText(QCoreApplication.translate("MainWindow", u"\u5bfc\u51fa", None))
         self.label_24.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_25.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))

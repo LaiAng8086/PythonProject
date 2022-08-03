@@ -4,7 +4,8 @@ import ui_style
 import ui_chart
 from functools import partial
 from Custom_Widgets.Widgets import *
-
+import csv_read
+import save_png
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     MainWindow = QMainWindow()
@@ -28,7 +29,29 @@ if __name__ == "__main__":
         ui.pg1_gv15,
         ui.pg1_gv16
     ]
-    ui_chart.setChart_Page1(chartviews)
+    parent_frames = [
+        ui.frame_11,
+        ui.frame_12,
+        ui.frame_13,
+        ui.frame_14,
+        ui.frame_15,
+        ui.frame_16,
+        ui.frame_17,
+        ui.frame_18,
+        ui.frame_19,
+        ui.frame_20,
+        ui.frame_21,
+        ui.frame_22,
+        ui.frame_23,
+        ui.frame_24,
+        ui.frame_25,
+        ui.frame_26
+    ]
+    csv_read.read_csv()
+    # ui_chart.setChart_Page1(chartviews)
+    ui_chart.set_page_1(chartviews, parent_frames, ui)
     loadJsonStyle(MainWindow, ui)
+    ui.stackedWidget.setCurrentIndex(0)
     MainWindow.show()
-    sys.exit(app.exec_())
+    save_png.save_it(ui.pg2_gv1)
+    app.exec_()
