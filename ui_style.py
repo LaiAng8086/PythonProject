@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1440, 900)
+        MainWindow.resize(1510, 900)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"background: transparent;\n"
@@ -372,8 +372,38 @@ class Ui_MainWindow(object):
         self.frame_5.setSizePolicy(sizePolicy)
         self.frame_5.setFrameShape(QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QFrame.Raised)
+        self.gridLayout_4 = QGridLayout(self.frame_5)
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.Btn_import = QPushButton(self.frame_5)
+        self.Btn_import.setObjectName(u"Btn_import")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.Btn_import.sizePolicy().hasHeightForWidth())
+        self.Btn_import.setSizePolicy(sizePolicy1)
 
-        self.verticalLayout_2.addWidget(self.frame_5)
+        self.gridLayout_4.addWidget(self.Btn_import, 2, 0, 1, 1)
+
+        self.toolButton = QToolButton(self.frame_5)
+        self.toolButton.setObjectName(u"toolButton")
+        self.toolButton.setMaximumSize(QSize(16777215, 30))
+
+        self.gridLayout_4.addWidget(self.toolButton, 1, 1, 1, 1)
+
+        self.label_filepath = QLabel(self.frame_5)
+        self.label_filepath.setObjectName(u"label_filepath")
+        self.label_filepath.setStyleSheet(u"font: 6pt \"Comic Sans MS\";")
+
+        self.gridLayout_4.addWidget(self.label_filepath, 1, 0, 1, 1, Qt.AlignHCenter)
+
+        self.label_35 = QLabel(self.frame_5)
+        self.label_35.setObjectName(u"label_35")
+        self.label_35.setStyleSheet(u"font: 75 12pt \"Comic Sans MS\";")
+
+        self.gridLayout_4.addWidget(self.label_35, 0, 0, 1, 2)
+
+
+        self.verticalLayout_2.addWidget(self.frame_5, 0, Qt.AlignVCenter)
 
 
         self.verticalLayout.addWidget(self.frame)
@@ -455,11 +485,11 @@ class Ui_MainWindow(object):
 
         self.frame_2 = QFrame(self.frame_top)
         self.frame_2.setObjectName(u"frame_2")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())
-        self.frame_2.setSizePolicy(sizePolicy1)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())
+        self.frame_2.setSizePolicy(sizePolicy2)
         self.frame_2.setStyleSheet(u"QPushButton {	\n"
 "	border: none;\n"
 "	background-color: transparent;\n"
@@ -514,8 +544,8 @@ class Ui_MainWindow(object):
 
         self.frame_views = QFrame(self.frame_content)
         self.frame_views.setObjectName(u"frame_views")
-        sizePolicy1.setHeightForWidth(self.frame_views.sizePolicy().hasHeightForWidth())
-        self.frame_views.setSizePolicy(sizePolicy1)
+        sizePolicy2.setHeightForWidth(self.frame_views.sizePolicy().hasHeightForWidth())
+        self.frame_views.setSizePolicy(sizePolicy2)
         self.frame_views.setStyleSheet(u"color:rgb(0, 0, 0)")
         self.frame_views.setFrameShape(QFrame.StyledPanel)
         self.frame_views.setFrameShadow(QFrame.Raised)
@@ -893,45 +923,75 @@ class Ui_MainWindow(object):
         self.frame_6.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.frame_6)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.label_34 = QLabel(self.frame_6)
+        self.label_34.setObjectName(u"label_34")
+
+        self.gridLayout.addWidget(self.label_34, 2, 0, 1, 1, Qt.AlignHCenter)
+
+        self.combo_factor = QComboBox(self.frame_6)
+        self.combo_factor.setObjectName(u"combo_factor")
+
+        self.gridLayout.addWidget(self.combo_factor, 4, 0, 1, 1)
+
+        self.label_33 = QLabel(self.frame_6)
+        self.label_33.setObjectName(u"label_33")
+
+        self.gridLayout.addWidget(self.label_33, 2, 1, 1, 1, Qt.AlignHCenter)
+
         self.label_6 = QLabel(self.frame_6)
         self.label_6.setObjectName(u"label_6")
 
-        self.gridLayout.addWidget(self.label_6, 0, 1, 1, 1, Qt.AlignHCenter)
+        self.gridLayout.addWidget(self.label_6, 0, 2, 1, 1, Qt.AlignHCenter)
 
-        self.pushButton_8 = QPushButton(self.frame_6)
-        self.pushButton_8.setObjectName(u"pushButton_8")
+        self.label_7 = QLabel(self.frame_6)
+        self.label_7.setObjectName(u"label_7")
 
-        self.gridLayout.addWidget(self.pushButton_8, 0, 3, 1, 1)
+        self.gridLayout.addWidget(self.label_7, 0, 3, 1, 1, Qt.AlignHCenter)
 
         self.label_5 = QLabel(self.frame_6)
         self.label_5.setObjectName(u"label_5")
 
         self.gridLayout.addWidget(self.label_5, 0, 0, 1, 1, Qt.AlignHCenter)
 
-        self.label_7 = QLabel(self.frame_6)
-        self.label_7.setObjectName(u"label_7")
+        self.label_32 = QLabel(self.frame_6)
+        self.label_32.setObjectName(u"label_32")
 
-        self.gridLayout.addWidget(self.label_7, 0, 2, 1, 1, Qt.AlignHCenter)
+        self.gridLayout.addWidget(self.label_32, 0, 1, 1, 1, Qt.AlignHCenter)
 
-        self.comboBox = QComboBox(self.frame_6)
-        self.comboBox.setObjectName(u"comboBox")
+        self.combo_class = QComboBox(self.frame_6)
+        self.combo_class.setObjectName(u"combo_class")
 
-        self.gridLayout.addWidget(self.comboBox, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.combo_class, 1, 1, 1, 1)
 
-        self.comboBox_2 = QComboBox(self.frame_6)
-        self.comboBox_2.setObjectName(u"comboBox_2")
+        self.combo_nation = QComboBox(self.frame_6)
+        self.combo_nation.setObjectName(u"combo_nation")
 
-        self.gridLayout.addWidget(self.comboBox_2, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.combo_nation, 1, 2, 1, 1)
 
-        self.comboBox_3 = QComboBox(self.frame_6)
-        self.comboBox_3.setObjectName(u"comboBox_3")
+        self.combo_sex = QComboBox(self.frame_6)
+        self.combo_sex.setObjectName(u"combo_sex")
 
-        self.gridLayout.addWidget(self.comboBox_3, 1, 2, 1, 1)
+        self.gridLayout.addWidget(self.combo_sex, 1, 3, 1, 1)
 
-        self.pushButton_9 = QPushButton(self.frame_6)
-        self.pushButton_9.setObjectName(u"pushButton_9")
+        self.combo_chart_type = QComboBox(self.frame_6)
+        self.combo_chart_type.setObjectName(u"combo_chart_type")
 
-        self.gridLayout.addWidget(self.pushButton_9, 1, 3, 1, 1)
+        self.gridLayout.addWidget(self.combo_chart_type, 4, 1, 1, 1)
+
+        self.combo_aca = QComboBox(self.frame_6)
+        self.combo_aca.setObjectName(u"combo_aca")
+
+        self.gridLayout.addWidget(self.combo_aca, 1, 0, 1, 1)
+
+        self.Btn_generate = QPushButton(self.frame_6)
+        self.Btn_generate.setObjectName(u"Btn_generate")
+
+        self.gridLayout.addWidget(self.Btn_generate, 4, 2, 1, 1)
+
+        self.Btn_export = QPushButton(self.frame_6)
+        self.Btn_export.setObjectName(u"Btn_export")
+
+        self.gridLayout.addWidget(self.Btn_export, 4, 3, 1, 1)
 
 
         self.verticalLayout_7.addWidget(self.frame_6)
@@ -1183,7 +1243,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1196,41 +1256,48 @@ class Ui_MainWindow(object):
         self.Btn_3.setText(QCoreApplication.translate("MainWindow", u"Training Result", None))
         self.Btn_4.setText(QCoreApplication.translate("MainWindow", u"Model Evaluation", None))
         self.Btn_5.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.Btn_import.setText(QCoreApplication.translate("MainWindow", u"Import!", None))
+        self.toolButton.setText(QCoreApplication.translate("MainWindow", u"...", None))
+        self.label_filepath.setText(QCoreApplication.translate("MainWindow", u"------", None))
+        self.label_35.setText(QCoreApplication.translate("MainWindow", u"Choose the data file to load", None))
         self.Btn_toggle.setText("")
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"MENU", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Dashboard", None))
         self.Btn_minimize.setText("")
         self.Btn_maximize.setText("")
         self.Btn_close.setText("")
-        self.label_22.setText(QCoreApplication.translate("MainWindow", u"Announcement", None))
-        self.label_15.setText(QCoreApplication.translate("MainWindow", u"Semester", None))
-        self.label_19.setText(QCoreApplication.translate("MainWindow", u"Discussion", None))
-        self.label_20.setText(QCoreApplication.translate("MainWindow", u"Parent Survey", None))
-        self.label_21.setText(QCoreApplication.translate("MainWindow", u"Parent Satisfaction", None))
+        self.label_22.setText(QCoreApplication.translate("MainWindow", u"Absent", None))
+        self.label_15.setText(QCoreApplication.translate("MainWindow", u"Relation", None))
+        self.label_19.setText(QCoreApplication.translate("MainWindow", u"Parent Survey", None))
+        self.label_20.setText(QCoreApplication.translate("MainWindow", u"Parent Satisfaction", None))
+        self.label_21.setText(QCoreApplication.translate("MainWindow", u"Announcement", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"School Level", None))
-        self.label_16.setText(QCoreApplication.translate("MainWindow", u"Relation", None))
+        self.label_16.setText(QCoreApplication.translate("MainWindow", u"Raise Hands", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Nationality", None))
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Subject", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Semester", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Sex", None))
-        self.label_17.setText(QCoreApplication.translate("MainWindow", u"Raise Hands", None))
-        self.label_23.setText(QCoreApplication.translate("MainWindow", u"Absent", None))
-        self.label_13.setText(QCoreApplication.translate("MainWindow", u"Section", None))
+        self.label_17.setText(QCoreApplication.translate("MainWindow", u"Online Resources", None))
+        self.label_23.setText(QCoreApplication.translate("MainWindow", u"Class", None))
+        self.label_13.setText(QCoreApplication.translate("MainWindow", u"Subject", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Grade", None))
-        self.label_18.setText(QCoreApplication.translate("MainWindow", u"Online Resources", None))
+        self.label_18.setText(QCoreApplication.translate("MainWindow", u"Discussion", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Birth Place", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Class", None))
-        self.pushButton_8.setText(QCoreApplication.translate("MainWindow", u"\u751f\u6210", None))
+        self.label_34.setText(QCoreApplication.translate("MainWindow", u"Factor", None))
+        self.label_33.setText(QCoreApplication.translate("MainWindow", u"Chart Type", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Nationality", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Sex", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Academic Year", None))
-        self.label_7.setText(QCoreApplication.translate("MainWindow", u"Factor", None))
-        self.pushButton_9.setText(QCoreApplication.translate("MainWindow", u"\u5bfc\u51fa", None))
-        self.label_24.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_25.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_26.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_27.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_28.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_29.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_30.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
-        self.label_31.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_32.setText(QCoreApplication.translate("MainWindow", u"Class", None))
+        self.Btn_generate.setText(QCoreApplication.translate("MainWindow", u"Generate!", None))
+        self.Btn_export.setText(QCoreApplication.translate("MainWindow", u"Export to png", None))
+        self.label_24.setText(QCoreApplication.translate("MainWindow", u"Contribution of factors", None))
+        self.label_25.setText(QCoreApplication.translate("MainWindow", u"Impact of factor1 on Class", None))
+        self.label_26.setText(QCoreApplication.translate("MainWindow", u"Impact of factor2 on Class", None))
+        self.label_27.setText(QCoreApplication.translate("MainWindow", u"Impact of factor3 on Class", None))
+        self.label_28.setText(QCoreApplication.translate("MainWindow", u"Impact of factor4 on class", None))
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"Impact of factor5 on class", None))
+        self.label_30.setText(QCoreApplication.translate("MainWindow", u"Predict result for each student in test set", None))
+        self.label_31.setText(QCoreApplication.translate("MainWindow", u"Result for Accuracy, Error rate, Precision & Recall rate", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Python Project by jyz,wxg,ljh & jrt", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Visit our project website on Github!", None))
     # retranslateUi

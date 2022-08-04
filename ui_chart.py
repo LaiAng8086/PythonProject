@@ -65,7 +65,7 @@ class my_pie_chart(my_normal_chart):
         n = len(type)
         for i in range(n):
             new_slice = QtCharts.QPieSlice()
-            new_slice.setLabel(type[i]+" "+str(round(data[i], 4)*100)+"%")
+            new_slice.setLabel(type[i]+" "+str(round(data[i]*100, 4))+"%")
             new_slice.setValue(data[i])
             new_slice.setLabelVisible(True)
             self.pie.append(new_slice)
@@ -134,30 +134,3 @@ def setLine_example(gv):
     chart.axis_x().setRange(0, 10)
     chart.axis_y().setRange(0, 20)
     chart.finish_draw()
-
-
-def set_page_1(chartviews, parent_frames, ui):
-    global chart_sex
-    chart_sex = my_pie_chart(chartviews[0], parent_frames[0], ui)
-    chart_sex.load_data(["Boys", "Girls"], csv_read.sex_ratio)
-    chart_sex.finish_draw()
-
-    global chart_nationality
-    chart_nationality = my_pie_chart(chartviews[1], parent_frames[1], ui)
-    chart_nationality.load_data(csv_read.nation_name, csv_read.nation_ratio)
-    chart_nationality.pie.setPieStartAngle(120)
-    chart_nationality.pie.setPieEndAngle(480)
-    chart_nationality.finish_draw()
-
-    global chart_birthplace
-    chart_birthplace = my_pie_chart(chartviews[2], parent_frames[2], ui)
-    chart_birthplace.load_data(csv_read.place_name, csv_read.place_ratio)
-    chart_birthplace.pie.setPieStartAngle(120)
-    chart_birthplace.pie.setPieEndAngle(480)
-    chart_birthplace.finish_draw()
-
-    global chart_academic_year
-    chart_academic_year = my_bar_chart(chartviews[3], parent_frames[3], ui)
-    chart_academic_year.load_data(
-        csv_read.academic_name, csv_read.academic_num)
-    chart_academic_year.finish_draw()

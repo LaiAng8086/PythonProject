@@ -5,7 +5,9 @@ import ui_chart
 from functools import partial
 from Custom_Widgets.Widgets import *
 import csv_read
-import save_png
+import ui_page_1
+import ui_page_2
+import load_in
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     MainWindow = QMainWindow()
@@ -49,9 +51,12 @@ if __name__ == "__main__":
     ]
     csv_read.read_csv()
     # ui_chart.setChart_Page1(chartviews)
-    ui_chart.set_page_1(chartviews, parent_frames, ui)
+    ui_page_1.setup(chartviews, parent_frames, ui)
+    ui_page_2.get_ui(ui)
+    ui_page_2.setup_button_event()
+    load_in.get_ui(ui)
+    load_in.setup_event()
     loadJsonStyle(MainWindow, ui)
     ui.stackedWidget.setCurrentIndex(0)
     MainWindow.show()
-    save_png.save_it(ui.pg2_gv1)
     app.exec_()
