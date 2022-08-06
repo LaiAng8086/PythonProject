@@ -9,6 +9,7 @@ from PySide2.QtGui import QPixmap
 from PySide2.QtCore import QObject
 from PySide2.QtCore import SIGNAL
 from PySide2.QtCore import QTime
+from PySide2.QtGui import QColor
 from PySide2.QtWidgets import *
 from functools import partial
 import random
@@ -83,6 +84,7 @@ class my_bar_chart(my_normal_chart):
         self.types = QtCharts.QBarCategoryAxis()
         self.values = QtCharts.QValueAxis()
         self.bar.clicked.connect(self.change_size)
+        self.type2 = False
 
     def load_data(self, groups_name, groups_data):
         n = len(groups_name)
@@ -94,11 +96,39 @@ class my_bar_chart(my_normal_chart):
                 new_barset.append(j)
             self.bar.append(new_barset)
 
+    def load_data2(self, groups_name, groups_data):
+        self.type2 = True
+        self.types.append(groups_name)
+        cnt = 0
+        self.barset = QtCharts.QBarSet("students")
+        self.barset.setColor(QColor("indigo"))
+        for i in groups_data:
+            cnt += 1
+            self.types.append(str(cnt))
+            self.barset.append(i)
+        self.bar.append(self.barset)
+        self.types.setVisible(False)
+        print(cnt)
+
+    def change_size(self):
+        super().change_size()
+        # if(self.type2):
+        #     chart_width = self.cv.frameSize().width()
+        #     print(chart_width, self.bar.count())
+        #     self.bar.setBarWidth(chart_width/self.bar.count())
+
     def finish_draw(self):
         self.chart.addSeries(self.bar)
         self.chart.addAxis(self.types, Qt.AlignBottom)
         self.chart.addAxis(self.values, Qt.AlignLeft)
+        # if(self.type2):
+        #     self.chart.legend().hide()
+        #     chart_width = self.cv.frameSize().width()
+        #     print(chart_width, self.bar.count())
+        #     self.bar.setBarWidth(chart_width/self.bar.count())
         super().finish_draw()
+        if(self.type2):
+            self.barset.setColor(QColor('indigo'))
 
 
 class my_line_chart(my_normal_chart):

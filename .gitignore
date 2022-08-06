@@ -1,0 +1,9 @@
+*.png
+__pycache__
+.qt_for_python
+.vscode
+build
+dist
+*.jpg
+*.zip
+*.rar

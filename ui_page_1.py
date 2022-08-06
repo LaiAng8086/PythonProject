@@ -58,26 +58,26 @@ def setup(chartviews, parent_frames, ui):
 
     global chart_raise_hands
     chart_raise_hands = ui_chart.my_bar_chart(chartviews[8], parent_frames[8], ui)
-    chart_raise_hands.load_data(
+    chart_raise_hands.load_data2(
         csv_read.raise_hands_name, csv_read.raise_hands_num)
-    chart_raise_hands.bar.setLabelsPosition(QtCharts.QAbstractBarSeries.LabelsInsideEnd)
-    chart_raise_hands.bar.setLabelsVisible(True)
+    # chart_raise_hands.bar.setLabelsPosition(QtCharts.QAbstractBarSeries.LabelsInsideEnd)
+    # chart_raise_hands.bar.setLabelsVisible(True)
     chart_raise_hands.values.setRange(0,500)
 
     global chart_visit_resource
     chart_visit_resource = ui_chart.my_bar_chart(chartviews[9], parent_frames[9], ui)
-    chart_visit_resource.load_data(
+    chart_visit_resource.load_data2(
         csv_read.visit_resource_name, csv_read.visit_resource_num)
-    chart_visit_resource.bar.setLabelsPosition(QtCharts.QAbstractBarSeries.LabelsInsideEnd)
-    chart_visit_resource.bar.setLabelsVisible(True)
+    # chart_visit_resource.bar.setLabelsPosition(QtCharts.QAbstractBarSeries.LabelsInsideEnd)
+    # chart_visit_resource.bar.setLabelsVisible(True)
     chart_visit_resource.values.setRange(0,500)
 
     global chart_discussion
     chart_discussion = ui_chart.my_bar_chart(chartviews[10],parent_frames[10],ui)
-    chart_discussion.load_data(
+    chart_discussion.load_data2(
         csv_read.discussion_name, csv_read.discussion_num)
-    chart_discussion.bar.setLabelsPosition(QtCharts.QAbstractBarSeries.LabelsInsideEnd)
-    chart_discussion.bar.setLabelsVisible(True)
+    # chart_discussion.bar.setLabelsPosition(QtCharts.QAbstractBarSeries.LabelsInsideEnd)
+    # chart_discussion.bar.setLabelsVisible(True)
     chart_discussion.values.setRange(0,500)
 
     global chart_parent_answer
@@ -90,10 +90,10 @@ def setup(chartviews, parent_frames, ui):
 
     global chart_announcement
     chart_announcement = ui_chart.my_bar_chart(chartviews[13],parent_frames[13],ui)
-    chart_announcement.load_data(
+    chart_announcement.load_data2(
         csv_read.announcement_name, csv_read.announcement_num)
-    chart_announcement.bar.setLabelsPosition(QtCharts.QAbstractBarSeries.LabelsInsideEnd)
-    chart_announcement.bar.setLabelsVisible(True)
+    # chart_announcement.bar.setLabelsPosition(QtCharts.QAbstractBarSeries.LabelsInsideEnd)
+    # chart_announcement.bar.setLabelsVisible(True)
     chart_announcement.values.setRange(0,500)
 
     global chart_absent

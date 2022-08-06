@@ -101,6 +101,7 @@ def read_academic():
         temp.append(categories[key])
         academic_num.append(temp)
 
+
 subject_name = []
 subject_num = []
 
@@ -172,10 +173,11 @@ def read_raise_hands():
     os.chdir(os.getcwd())
     data = pandas.read_csv('students_data_FIX.csv',
                            usecols=[9]).values.tolist()
-    temp = []
-    raise_hands_num.append(temp)
     for i in data:
-        raise_hands_num[0].append(i[0])
+        global raise_hands_num
+        raise_hands_num.append(i[0])
+
+    raise_hands_num = sorted(raise_hands_num)
 
 
 visit_resource_name = ["students"]
@@ -186,10 +188,10 @@ def read_visit_resource():
     os.chdir(os.getcwd())
     data = pandas.read_csv('students_data_FIX.csv',
                            usecols=[10]).values.tolist()
-    temp = []
-    visit_resource_num.append(temp)
     for i in data:
-        visit_resource_num[0].append(i[0])
+        global visit_resource_num
+        visit_resource_num.append(i[0])
+    visit_resource_num = sorted(visit_resource_num)
 
 
 announcement_name = ["students"]
@@ -200,10 +202,10 @@ def read_announcement():
     os.chdir(os.getcwd())
     data = pandas.read_csv('students_data_FIX.csv',
                            usecols=[11]).values.tolist()
-    temp = []
-    announcement_num.append(temp)
     for i in data:
-        announcement_num[0].append(i[0])
+        global announcement_num
+        announcement_num.append(i[0])
+    announcement_num = sorted(announcement_num)
 
 
 discussion_name = ["students"]
@@ -214,10 +216,11 @@ def read_discussion():
     os.chdir(os.getcwd())
     data = pandas.read_csv('students_data_FIX.csv',
                            usecols=[12]).values.tolist()
-    temp = []
-    discussion_num.append(temp)
     for i in data:
-        discussion_num[0].append(i[0])
+        global discussion_num
+        discussion_num.append(i[0])
+    discussion_num = sorted(discussion_num)
+
 
 parent_answer_name = []
 parent_answer_ratio = []
@@ -260,6 +263,7 @@ def read_parent_satisfy():
         parent_satisfy_name.append(key)
         parent_satisfy_ratio.append(value/total)
 
+
 absent_name = []
 absent_ratio = []
 
@@ -280,6 +284,7 @@ def read_absent():
         absent_name.append(key)
         absent_ratio.append(value/total)
 
+
 class_name = []
 class_num = []
 
@@ -299,6 +304,8 @@ def read_class():
         temp = []
         temp.append(categories[key])
         class_num.append(temp)
+
+
 factors = []
 
 
@@ -328,3 +335,67 @@ def read_csv():
     read_parent_satisfy()
     read_absent()
     read_class()
+
+
+factor_col = {
+    "Relation": 8,
+    "raisedhands": 9,
+    "VisitedResources": 10,
+    "AnnouncementsView": 11,
+    "Discussion": 12,
+    "ParentAnsweringSurvey": 13,
+    "ParentschoolSatisfaction": 14,
+    "StudentAbsenceDays": 15
+}
+
+selected_name = []
+selected_num = []
+selected_num_class = [[], [], []]
+gender_dict = {
+    "Boys": "M",
+    "Girls": "F"
+}
+
+
+def select_data(academic_year, class_, nationality, gender, factor):
+    print(factor_col[factor])
+    data = pandas.read_csv("students_data_FIX.csv", usecols=[
+                           0, 1, 4, 16, factor_col[factor]])
+    total = 0
+    selected_name.clear()
+    selected_num.clear()
+    selected_num_class[0].clear()
+    selected_num_class[1].clear()
+    selected_num_class[2].clear()
+    temp_num = {}
+    temp_num_class = [{}, {}, {}]
+    for i in data.values:
+        if(academic_year != '------' and i[2] != academic_year):
+            continue
+        if(class_ != '------' and str(i[-1]) != class_):
+            continue
+        if(nationality != '------' and i[1] != nationality):
+            continue
+        if(gender != '------' and i[0] != gender_dict[gender]):
+            continue
+        total += 1
+        if(temp_num.get(i[-2]) == None):
+            temp_num[i[-2]] = 1
+        else:
+            temp_num[i[-2]] = temp_num[i[-2]]+1
+        if(class_ == "------"):
+            if(temp_num_class[i[-1]-1].get(i[-2]) == None):
+                temp_num_class[i[-1]-1][i[-2]] = 1
+            else:
+                temp_num_class[i[-1]-1][i[-2]
+                                        ] = temp_num_class[i[-1]-1][i[-2]]+1
+    for key, value in temp_num.items():
+        selected_name.append(key)
+        selected_num.append(value)
+    for i in range(3):
+        for value in temp_num_class[i].values():
+            selected_num_class[i].append(value)
+    return total
+
+
+# select_data("G-04", "1", "Kuwait", "M", "Relation")
