@@ -3,7 +3,7 @@ from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 import ui_page_1
 import ui_page_2
-
+import csv_read
 def get_ui(input):
     global ui
     ui = input
@@ -19,6 +19,8 @@ def get_file():
 def import_file():
     ui_page_1.finish_draw_all()
     ui_page_2.setup_combo()
+    ui_page_2.setup_default_diagram()
+    ui.status_label.setText("Status: There are "+str(csv_read.total_records)+" records in total.")
     QMessageBox.information(ui.centralwidget, "Import",
                             "The file has been imported successfully!")
 

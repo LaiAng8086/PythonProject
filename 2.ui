@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1510</width>
+    <width>1500</width>
     <height>900</height>
    </rect>
   </property>
@@ -470,7 +470,7 @@ QPushButton:pressed {
                    <enum>Qt::LeftToRight</enum>
                   </property>
                   <property name="text">
-                   <string>Training Result</string>
+                   <string>Feature Analysis</string>
                   </property>
                   <property name="icon">
                    <iconset resource="icons_2.qrc">
@@ -502,7 +502,7 @@ QPushButton:pressed {
                    <string notr="true"/>
                   </property>
                   <property name="text">
-                   <string>Model Evaluation</string>
+                   <string>Feature Correlation</string>
                   </property>
                   <property name="icon">
                    <iconset resource="icons_2.qrc">
@@ -513,25 +513,6 @@ QPushButton:pressed {
                     <width>30</width>
                     <height>30</height>
                    </size>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="Btn_5">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>50</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>PushButton</string>
                   </property>
                  </widget>
                 </item>
@@ -546,6 +527,20 @@ QPushButton:pressed {
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+	border: 2px solid rgb(0, 0, 128);
+	border-radius: 5px;	
+}
+QPushButton:hover {
+	background-color: rgb(25, 25, 112);
+	border: 2px solid rgb(65, 105, 225);
+}
+QPushButton:pressed {	
+	background-color: rgb(72, 61, 139);
+	border: 2px solid rgb(43, 50, 61);
+}</string>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -553,19 +548,6 @@ QPushButton:pressed {
                 <enum>QFrame::Raised</enum>
                </property>
                <layout class="QGridLayout" name="gridLayout_4">
-                <item row="2" column="0">
-                 <widget class="QPushButton" name="Btn_import">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="text">
-                   <string>Import!</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="1" column="1">
                  <widget class="QToolButton" name="toolButton">
                   <property name="maximumSize">
@@ -573,6 +555,20 @@ QPushButton:pressed {
                     <width>16777215</width>
                     <height>30</height>
                    </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QToolButton {
+	border: 2px solid rgb(0, 0, 128);
+	border-radius: 5px;	
+}
+QToolButton:hover {
+	background-color: rgb(25, 25, 112);
+	border: 2px solid rgb(65, 105, 225);
+}
+QToolButton:pressed {	
+	background-color: rgb(72, 61, 139);
+	border: 2px solid rgb(43, 50, 61);
+}</string>
                   </property>
                   <property name="text">
                    <string>...</string>
@@ -582,10 +578,10 @@ QPushButton:pressed {
                 <item row="1" column="0" alignment="Qt::AlignHCenter">
                  <widget class="QLabel" name="label_filepath">
                   <property name="styleSheet">
-                   <string notr="true">font: 6pt &quot;Comic Sans MS&quot;;</string>
+                   <string notr="true">font: 10pt &quot;Times Newman&quot;;</string>
                   </property>
                   <property name="text">
-                   <string>------</string>
+                   <string>- - - - - -</string>
                   </property>
                  </widget>
                 </item>
@@ -596,6 +592,19 @@ QPushButton:pressed {
                   </property>
                   <property name="text">
                    <string>Choose the data file to load</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0" colspan="2">
+                 <widget class="QPushButton" name="Btn_import">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>Import!</string>
                   </property>
                  </widget>
                 </item>
@@ -726,6 +735,9 @@ QPushButton:pressed {
                 </item>
                 <item>
                  <widget class="QLabel" name="label_3">
+                  <property name="styleSheet">
+                   <string notr="true">font: 12pt &quot;Comic Sans MS&quot;;</string>
+                  </property>
                   <property name="text">
                    <string>MENU</string>
                   </property>
@@ -760,8 +772,11 @@ QPushButton:pressed {
                 </property>
                 <item alignment="Qt::AlignHCenter">
                  <widget class="QLabel" name="label_4">
+                  <property name="styleSheet">
+                   <string notr="true">font: 75 13pt &quot;Comic Sans MS&quot;;</string>
+                  </property>
                   <property name="text">
-                   <string>Dashboard</string>
+                   <string>Data Visualization Toolkit</string>
                   </property>
                  </widget>
                 </item>
@@ -894,10 +909,25 @@ QPushButton:pressed {
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
               <widget class="QCustomStackedWidget" name="stackedWidget">
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="page_1">
                 <layout class="QGridLayout" name="gridLayout_2">
@@ -926,13 +956,13 @@ QPushButton:pressed {
                    </property>
                    <layout class="QGridLayout" name="gridLayout_3">
                     <property name="leftMargin">
-                     <number>0</number>
+                     <number>8</number>
                     </property>
                     <property name="topMargin">
                      <number>0</number>
                     </property>
                     <property name="rightMargin">
-                     <number>0</number>
+                     <number>8</number>
                     </property>
                     <property name="bottomMargin">
                      <number>0</number>
@@ -964,8 +994,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_22">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label15">
                          <property name="text">
                           <string>Absent</string>
                          </property>
@@ -1001,8 +1031,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_15">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label8">
                          <property name="text">
                           <string>Relation</string>
                          </property>
@@ -1038,8 +1068,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_19">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label12">
                          <property name="text">
                           <string>Parent Survey</string>
                          </property>
@@ -1075,8 +1105,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_20">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label13">
                          <property name="text">
                           <string>Parent Satisfaction</string>
                          </property>
@@ -1112,8 +1142,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_21">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label14">
                          <property name="text">
                           <string>Announcement</string>
                          </property>
@@ -1149,8 +1179,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_9">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label4">
                          <property name="text">
                           <string>School Level</string>
                          </property>
@@ -1186,8 +1216,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_16">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label9">
                          <property name="text">
                           <string>Raise Hands</string>
                          </property>
@@ -1223,8 +1253,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_11">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label2">
                          <property name="text">
                           <string>Nationality</string>
                          </property>
@@ -1260,8 +1290,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_14">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label7">
                          <property name="text">
                           <string>Semester</string>
                          </property>
@@ -1297,8 +1327,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_8">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label1">
                          <property name="text">
                           <string>Sex</string>
                          </property>
@@ -1334,8 +1364,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_17">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label10">
                          <property name="text">
                           <string>Online Resources</string>
                          </property>
@@ -1371,8 +1401,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_23">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label16">
                          <property name="text">
                           <string>Class</string>
                          </property>
@@ -1408,8 +1438,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_13">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label6">
                          <property name="text">
                           <string>Subject</string>
                          </property>
@@ -1445,10 +1475,10 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_12">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label5">
                          <property name="text">
-                          <string>Grade</string>
+                          <string>Academic Year</string>
                          </property>
                         </widget>
                        </item>
@@ -1482,8 +1512,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_18">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label11">
                          <property name="text">
                           <string>Discussion</string>
                          </property>
@@ -1519,8 +1549,8 @@ QPushButton:pressed {
                        <property name="bottomMargin">
                         <number>0</number>
                        </property>
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_10">
+                       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                        <widget class="QLabel" name="pg1_label3">
                          <property name="text">
                           <string>Birth Place</string>
                          </property>
@@ -1557,43 +1587,45 @@ QPushButton:pressed {
                        <enum>QFrame::Raised</enum>
                       </property>
                       <layout class="QGridLayout" name="gridLayout">
-                       <item row="2" column="0" alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_34">
-                         <property name="text">
-                          <string>Factor</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item row="4" column="0">
-                        <widget class="QComboBox" name="combo_factor"/>
-                       </item>
-                       <item row="2" column="1" alignment="Qt::AlignHCenter">
+                       <item row="0" column="6" alignment="Qt::AlignHCenter">
                         <widget class="QLabel" name="label_33">
                          <property name="text">
                           <string>Chart Type</string>
                          </property>
                         </widget>
                        </item>
-                       <item row="0" column="2" alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_6">
+                       <item row="3" column="5">
+                        <widget class="QComboBox" name="combo_factor"/>
+                       </item>
+                       <item row="0" column="5" alignment="Qt::AlignHCenter">
+                        <widget class="QLabel" name="label_34">
                          <property name="text">
-                          <string>Nationality</string>
+                          <string>Factor</string>
                          </property>
                         </widget>
                        </item>
-                       <item row="0" column="3" alignment="Qt::AlignHCenter">
+                       <item row="0" column="4" alignment="Qt::AlignHCenter">
                         <widget class="QLabel" name="label_7">
                          <property name="text">
                           <string>Sex</string>
                          </property>
                         </widget>
                        </item>
-                       <item row="0" column="0" alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_5">
+                       <item row="3" column="3">
+                        <widget class="QComboBox" name="combo_nation"/>
+                       </item>
+                       <item row="0" column="3" alignment="Qt::AlignHCenter">
+                        <widget class="QLabel" name="label_6">
                          <property name="text">
-                          <string>Academic Year</string>
+                          <string>Nationality</string>
                          </property>
                         </widget>
+                       </item>
+                       <item row="3" column="4">
+                        <widget class="QComboBox" name="combo_sex"/>
+                       </item>
+                       <item row="3" column="6">
+                        <widget class="QComboBox" name="combo_chart_type"/>
                        </item>
                        <item row="0" column="1" alignment="Qt::AlignHCenter">
                         <widget class="QLabel" name="label_32">
@@ -1602,32 +1634,47 @@ QPushButton:pressed {
                          </property>
                         </widget>
                        </item>
-                       <item row="1" column="1">
+                       <item row="3" column="1">
                         <widget class="QComboBox" name="combo_class"/>
                        </item>
-                       <item row="1" column="2">
-                        <widget class="QComboBox" name="combo_nation"/>
-                       </item>
-                       <item row="1" column="3">
-                        <widget class="QComboBox" name="combo_sex"/>
-                       </item>
-                       <item row="4" column="1">
-                        <widget class="QComboBox" name="combo_chart_type"/>
-                       </item>
-                       <item row="1" column="0">
-                        <widget class="QComboBox" name="combo_aca"/>
-                       </item>
-                       <item row="4" column="2">
-                        <widget class="QPushButton" name="Btn_generate">
+                       <item row="0" column="2" alignment="Qt::AlignHCenter">
+                        <widget class="QLabel" name="label_5">
                          <property name="text">
-                          <string>Generate!</string>
+                          <string>Academic Year</string>
                          </property>
                         </widget>
                        </item>
-                       <item row="4" column="3">
-                        <widget class="QPushButton" name="Btn_export">
+                       <item row="3" column="2">
+                        <widget class="QComboBox" name="combo_aca"/>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_3">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_33">
+                       <item>
+                        <widget class="QLabel" name="label">
+                         <property name="styleSheet">
+                          <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+                         </property>
                          <property name="text">
-                          <string>Export to png</string>
+                          <string>Notice:
+ 1. The factor you would like to observe must be set.
+ 2. If you choose the default item of a filter, it will not exclude any data for this.</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="Btn_generate">
+                         <property name="text">
+                          <string>Generate Diagram!</string>
                          </property>
                         </widget>
                        </item>
@@ -1679,146 +1726,450 @@ QPushButton:pressed {
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_25">
+                   <layout class="QHBoxLayout" name="horizontalLayout_9">
                     <item>
                      <widget class="QFrame" name="frame_28">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <layout class="QVBoxLayout" name="verticalLayout_31">
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_24">
-                         <property name="text">
-                          <string>Contribution of factors</string>
-                         </property>
-                        </widget>
-                       </item>
+                      <layout class="QVBoxLayout" name="verticalLayout_4">
                        <item>
-                        <widget class="QChartView" name="graphicsView_2"/>
+                        <layout class="QGridLayout" name="grid_radar"/>
                        </item>
                       </layout>
                      </widget>
                     </item>
                     <item>
                      <widget class="QFrame" name="frame_29">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>525</width>
+                        <height>0</height>
+                       </size>
+                      </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_9">
+                      <layout class="QHBoxLayout" name="horizontalLayout_13">
                        <item>
-                        <widget class="QFrame" name="frame_30">
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
+                        <widget class="QScrollArea" name="scrollArea">
+                         <property name="verticalScrollBarPolicy">
+                          <enum>Qt::ScrollBarAlwaysOn</enum>
                          </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
+                         <property name="horizontalScrollBarPolicy">
+                          <enum>Qt::ScrollBarAlwaysOff</enum>
                          </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_26">
-                          <item alignment="Qt::AlignHCenter">
-                           <widget class="QLabel" name="label_25">
-                            <property name="text">
-                             <string>Impact of factor1 on Class</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QChartView" name="graphicsView_3"/>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QFrame" name="frame_31">
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
+                         <property name="sizeAdjustPolicy">
+                          <enum>QAbstractScrollArea::AdjustToContents</enum>
                          </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
+                         <property name="widgetResizable">
+                          <bool>true</bool>
                          </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_27">
-                          <item alignment="Qt::AlignHCenter">
-                           <widget class="QLabel" name="label_26">
-                            <property name="text">
-                             <string>Impact of factor2 on Class</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QChartView" name="graphicsView_4"/>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QFrame" name="frame_32">
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_28">
-                          <item alignment="Qt::AlignHCenter">
-                           <widget class="QLabel" name="label_27">
-                            <property name="text">
-                             <string>Impact of factor3 on Class</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QChartView" name="graphicsView_5"/>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QFrame" name="frame_33">
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_29">
-                          <item alignment="Qt::AlignHCenter">
-                           <widget class="QLabel" name="label_28">
-                            <property name="text">
-                             <string>Impact of factor4 on class</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QChartView" name="graphicsView_6"/>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QFrame" name="frame_34">
-                         <property name="frameShape">
-                          <enum>QFrame::StyledPanel</enum>
-                         </property>
-                         <property name="frameShadow">
-                          <enum>QFrame::Raised</enum>
-                         </property>
-                         <layout class="QVBoxLayout" name="verticalLayout_30">
-                          <item alignment="Qt::AlignHCenter">
-                           <widget class="QLabel" name="label_29">
-                            <property name="text">
-                             <string>Impact of factor5 on class</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QChartView" name="graphicsView_7"/>
-                          </item>
-                         </layout>
+                         <widget class="QWidget" name="scrollAreaWidgetContents">
+                          <property name="geometry">
+                           <rect>
+                            <x>0</x>
+                            <y>0</y>
+                            <width>248</width>
+                            <height>3100</height>
+                           </rect>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_25">
+                           <property name="spacing">
+                            <number>0</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="page3_frame1">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>400</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_27">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QLabel" name="label_8">
+                                <property name="text">
+                                 <string>Impact Of Relation On Class </string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <layout class="QGridLayout" name="page3_grid1"/>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="page3_frame2">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>400</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_28">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QLabel" name="label_9">
+                                <property name="text">
+                                 <string>Impact Of Raised Hands On Class</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <layout class="QGridLayout" name="page3_grid2"/>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="page3_frame3">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>300</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_29">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QLabel" name="label_10">
+                                <property name="text">
+                                 <string>Impact Of Visited Resources On Class</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <layout class="QGridLayout" name="page3_grid3"/>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="page3_frame4">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>400</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_30">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QLabel" name="label_11">
+                                <property name="text">
+                                 <string>Impact Of AnnouncementsView On Class</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <layout class="QGridLayout" name="page3_grid4"/>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="page3_frame5">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>400</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_31">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QLabel" name="label_12">
+                                <property name="text">
+                                 <string>Impact Of Discussion On Class</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <layout class="QGridLayout" name="page3_grid5"/>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="page3_frame6">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>400</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_35">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QLabel" name="label_13">
+                                <property name="text">
+                                 <string>Impact Of ParentAnsweringSurvey On Class</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <layout class="QGridLayout" name="page3_grid6"/>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="page3_frame7">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>400</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_26">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QLabel" name="impact_label_1">
+                                <property name="text">
+                                 <string>Impact Of ParentschoolSatisfaction</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <layout class="QGridLayout" name="page3_grid7">
+                                <property name="spacing">
+                                 <number>0</number>
+                                </property>
+                               </layout>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QFrame" name="page3_frame8">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>400</height>
+                              </size>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_36">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item alignment="Qt::AlignHCenter">
+                               <widget class="QLabel" name="label_14">
+                                <property name="text">
+                                 <string>Impact Of StudentAbsenceDays</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <layout class="QGridLayout" name="page3_grid8"/>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
                         </widget>
                        </item>
                       </layout>
@@ -1856,48 +2207,7 @@ QPushButton:pressed {
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_32">
                     <item>
-                     <widget class="QFrame" name="frame_36">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <layout class="QVBoxLayout" name="verticalLayout_34">
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_30">
-                         <property name="text">
-                          <string>Predict result for each student in test set</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QTableView" name="tableView"/>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QFrame" name="frame_37">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <layout class="QVBoxLayout" name="verticalLayout_33">
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_31">
-                         <property name="text">
-                          <string>Result for Accuracy, Error rate, Precision &amp; Recall rate</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QChartView" name="graphicsView_8"/>
-                       </item>
-                      </layout>
-                     </widget>
+                     <layout class="QGridLayout" name="page4_grid"/>
                     </item>
                    </layout>
                   </widget>
@@ -1920,18 +2230,39 @@ QPushButton:pressed {
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_4">
-             <item>
-              <widget class="QLabel" name="label">
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="label_2">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(0, 85, 0);</string>
+               </property>
                <property name="text">
-                <string>Python Project by jyz,wxg,ljh &amp; jrt</string>
+                <string>Python Project By jyz,wxg,jrt &amp; ljh!</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label_2">
+              <widget class="QLabel" name="status_label">
+               <property name="styleSheet">
+                <string notr="true">font: 13pt &quot;Times New Roman&quot;;</string>
+               </property>
                <property name="text">
-                <string>Visit our project website on Github!</string>
+                <string>Status: Data not loaded yet!</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="Btn_export">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton:disabled{
+	color: rgb(109,109,109)
+}</string>
+               </property>
+               <property name="text">
+                <string>Export to PNG!</string>
                </property>
               </widget>
              </item>

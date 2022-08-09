@@ -7,7 +7,10 @@ from Custom_Widgets.Widgets import *
 import csv_read
 import ui_page_1
 import ui_page_2
+import ui_page_3
+import ui_page_4
 import load_in
+import save_png
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     MainWindow = QMainWindow()
@@ -50,12 +53,19 @@ if __name__ == "__main__":
         ui.frame_26
     ]
     csv_read.read_csv()
-    # ui_chart.setChart_Page1(chartviews)
+    ui.Btn_export.clicked.connect(save_png.export_png)
+    ui.Btn_export.setDisabled(True)
+    load_in.get_ui(ui)
+    load_in.setup_event()
     ui_page_1.setup(chartviews, parent_frames, ui)
     ui_page_2.get_ui(ui)
     ui_page_2.setup_button_event()
-    load_in.get_ui(ui)
-    load_in.setup_event()
+    ui_page_3.get_ui(ui)
+    ui_page_3.setup_diagrams()
+    ui_page_3.setup_radar()
+    ui_page_4.get_ui(ui)
+    ui_page_4.setup()
+    save_png.get_ui(ui)
     loadJsonStyle(MainWindow, ui)
     ui.stackedWidget.setCurrentIndex(0)
     MainWindow.show()

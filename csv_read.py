@@ -165,61 +165,36 @@ def read_relation():
         relation_ratio.append(value/total)
 
 
-raise_hands_name = ["students"]
+raise_hands_name = []
 raise_hands_num = []
 
-
-def read_raise_hands():
-    os.chdir(os.getcwd())
-    data = pandas.read_csv('students_data_FIX.csv',
-                           usecols=[9]).values.tolist()
-    for i in data:
-        global raise_hands_num
-        raise_hands_num.append(i[0])
-
-    raise_hands_num = sorted(raise_hands_num)
-
-
-visit_resource_name = ["students"]
+visit_resource_name = []
 visit_resource_num = []
 
 
-def read_visit_resource():
-    os.chdir(os.getcwd())
-    data = pandas.read_csv('students_data_FIX.csv',
-                           usecols=[10]).values.tolist()
-    for i in data:
-        global visit_resource_num
-        visit_resource_num.append(i[0])
-    visit_resource_num = sorted(visit_resource_num)
-
-
-announcement_name = ["students"]
+announcement_name = []
 announcement_num = []
 
 
-def read_announcement():
-    os.chdir(os.getcwd())
-    data = pandas.read_csv('students_data_FIX.csv',
-                           usecols=[11]).values.tolist()
-    for i in data:
-        global announcement_num
-        announcement_num.append(i[0])
-    announcement_num = sorted(announcement_num)
-
-
-discussion_name = ["students"]
+discussion_name = []
 discussion_num = []
 
 
-def read_discussion():
+def read_bar_2(col, name, array):
     os.chdir(os.getcwd())
     data = pandas.read_csv('students_data_FIX.csv',
-                           usecols=[12]).values.tolist()
+                           usecols=[col]).values.tolist()
+    total = 0
+    prob = {}
     for i in data:
-        global discussion_num
-        discussion_num.append(i[0])
-    discussion_num = sorted(discussion_num)
+        total += 1
+        if i[0] not in prob:
+            prob[i[0]] = 1
+        else:
+            prob[i[0]] += 1
+    for i in sorted(prob):
+        name.append(str(i))
+        array.append(prob[i]/total)
 
 
 parent_answer_name = []
@@ -288,13 +263,17 @@ def read_absent():
 class_name = []
 class_num = []
 
+total_records = 0
+
 
 def read_class():
+    global total_records
     os.chdir(os.getcwd())
     data = pandas.read_csv('students_data_FIX.csv',
                            usecols=[16]).values.tolist()
     categories = {}
     for i in data:
+        total_records += 1
         if(categories.get(i[0]) == None):
             categories[i[0]] = 1
         else:
@@ -327,10 +306,10 @@ def read_csv():
     read_subject()
     read_semester()
     read_relation()
-    read_raise_hands()
-    read_visit_resource()
-    read_announcement()
-    read_discussion()
+    read_bar_2(9, raise_hands_name, raise_hands_num)
+    read_bar_2(10, visit_resource_name, visit_resource_num)
+    read_bar_2(11, announcement_name, announcement_num)
+    read_bar_2(12, discussion_name, discussion_num)
     read_parent_answer()
     read_parent_satisfy()
     read_absent()
@@ -356,9 +335,7 @@ gender_dict = {
     "Girls": "F"
 }
 
-
 def select_data(academic_year, class_, nationality, gender, factor):
-    print(factor_col[factor])
     data = pandas.read_csv("students_data_FIX.csv", usecols=[
                            0, 1, 4, 16, factor_col[factor]])
     total = 0
@@ -389,13 +366,17 @@ def select_data(academic_year, class_, nationality, gender, factor):
             else:
                 temp_num_class[i[-1]-1][i[-2]
                                         ] = temp_num_class[i[-1]-1][i[-2]]+1
-    for key, value in temp_num.items():
-        selected_name.append(key)
-        selected_num.append(value)
+    for i in sorted(temp_num):
+        selected_name.append(i)
+        selected_num.append(temp_num[i])
     for i in range(3):
         for value in temp_num_class[i].values():
             selected_num_class[i].append(value)
     return total
 
+
+def read_data():
+    global csv_data
+    csv_data=pandas.read_csv('students_data_FIX.csv')
 
 # select_data("G-04", "1", "Kuwait", "M", "Relation")
