@@ -163,21 +163,20 @@ class Ui_MainWindow(object):
 "\n"
 "/* COMBOBOX */\n"
 "QComboBox{\n"
-"	background-color: rgb(27, 29, 35);\n"
+"	background-color: rgb(255, 255, 255);\n"
 "	border-radius: 5px;\n"
-"	border: 2px solid rgb(27, 29, 35);\n"
+"	border: 2px solid rgb(255, 255, 255);\n"
 "	padding: 5px;\n"
 "	padding-left: 10px;\n"
 "}\n"
 "QComboBox:hover{\n"
-"	border: 2px solid rgb(64, 71, 88);\n"
+"	border: 2px solid rgb(119, 136, 153);\n"
+"    border-left-color: rgb(119,136, 153);\n"
 "}\n"
 "QComboBox::drop-down {\n"
 "	subcontrol-origin: padding;\n"
 "	subcontrol-position: top right;\n"
 "	width: 25px; \n"
-"	border-left-width: 3px;\n"
-"	border-left-color: rgba(39, 44, 54, 150);\n"
 "	border-left-style: solid;\n"
 "	border-top-right-radius: 3px;\n"
 "	border-bottom-right-radius: 3px;	\n"
@@ -186,11 +185,11 @@ class Ui_MainWindow(object):
 "	background-repeat: no-reperat;\n"
 " }\n"
 "QComboBox QAbstractItemView {\n"
-"	color: rgb("
-                        "85, 170, 255);	\n"
-"	background-color: rgb(27, 29, 35);\n"
+"	color: rgb(255, 255, 255);	\n"
+""
+                        "	background-color: rgb(70, 130, 180);\n"
 "	padding: 10px;\n"
-"	selection-background-color: rgb(39, 44, 54);\n"
+"	selection-background-color: rgb(25, 25, 112);\n"
 "}\n"
 "\n"
 "/* SLIDERS */\n"
@@ -227,9 +226,9 @@ class Ui_MainWindow(object):
 "QSlider::groove:vertical:hover {\n"
 "	background-color: rgb(55, 62, 76);\n"
 "}\n"
-"QSlider::handle:verti"
-                        "cal {\n"
-"    background-color: rgb(85, 170, 255);\n"
+"QSlider::handle:vertical {\n"
+"    bac"
+                        "kground-color: rgb(85, 170, 255);\n"
 "	border: none;\n"
 "    height: 18px;\n"
 "    width: 18px;\n"
@@ -431,7 +430,8 @@ class Ui_MainWindow(object):
         self.frame_content.setObjectName(u"frame_content")
         sizePolicy.setHeightForWidth(self.frame_content.sizePolicy().hasHeightForWidth())
         self.frame_content.setSizePolicy(sizePolicy)
-        self.frame_content.setStyleSheet(u"background-color: rgb(135, 206, 250);")
+        self.frame_content.setStyleSheet(u"background-color: rgb(0, 191, 235);\n"
+"color: rgb(255,255,255)")
         self.frame_content.setFrameShape(QFrame.NoFrame)
         self.frame_content.setFrameShadow(QFrame.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.frame_content)
@@ -440,7 +440,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.frame_top = QFrame(self.frame_content)
         self.frame_top.setObjectName(u"frame_top")
-        self.frame_top.setStyleSheet(u"color:rgb(0, 0, 0)")
+        self.frame_top.setStyleSheet(u"color:rgb(255, 255, 255)")
         self.frame_top.setFrameShape(QFrame.StyledPanel)
         self.frame_top.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_top)
@@ -933,18 +933,22 @@ class Ui_MainWindow(object):
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.frame_7 = QFrame(self.page_2)
         self.frame_7.setObjectName(u"frame_7")
+        self.frame_7.setStyleSheet(u"color: rgb(255,255,255)")
         self.frame_7.setFrameShape(QFrame.StyledPanel)
         self.frame_7.setFrameShadow(QFrame.Raised)
         self.verticalLayout_7 = QVBoxLayout(self.frame_7)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.frame_6 = QFrame(self.frame_7)
         self.frame_6.setObjectName(u"frame_6")
+        self.frame_6.setStyleSheet(u"color: rgb(255, 255, 255)")
         self.frame_6.setFrameShape(QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.frame_6)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setContentsMargins(11, -1, -1, -1)
         self.label_33 = QLabel(self.frame_6)
         self.label_33.setObjectName(u"label_33")
+        self.label_33.setStyleSheet(u"font: 75 12pt \"Consolas\";")
 
         self.gridLayout.addWidget(self.label_33, 0, 6, 1, 1, Qt.AlignHCenter)
 
@@ -955,11 +959,13 @@ class Ui_MainWindow(object):
 
         self.label_34 = QLabel(self.frame_6)
         self.label_34.setObjectName(u"label_34")
+        self.label_34.setStyleSheet(u"font: 75 12pt \"Consolas\";")
 
         self.gridLayout.addWidget(self.label_34, 0, 5, 1, 1, Qt.AlignHCenter)
 
         self.label_7 = QLabel(self.frame_6)
         self.label_7.setObjectName(u"label_7")
+        self.label_7.setStyleSheet(u"font: 75 12pt \"Consolas\";")
 
         self.gridLayout.addWidget(self.label_7, 0, 4, 1, 1, Qt.AlignHCenter)
 
@@ -970,6 +976,7 @@ class Ui_MainWindow(object):
 
         self.label_6 = QLabel(self.frame_6)
         self.label_6.setObjectName(u"label_6")
+        self.label_6.setStyleSheet(u"font: 75 12pt \"Consolas\";")
 
         self.gridLayout.addWidget(self.label_6, 0, 3, 1, 1, Qt.AlignHCenter)
 
@@ -985,6 +992,7 @@ class Ui_MainWindow(object):
 
         self.label_32 = QLabel(self.frame_6)
         self.label_32.setObjectName(u"label_32")
+        self.label_32.setStyleSheet(u"font: 75 12pt \"Consolas\";")
 
         self.gridLayout.addWidget(self.label_32, 0, 1, 1, 1, Qt.AlignHCenter)
 
@@ -995,6 +1003,7 @@ class Ui_MainWindow(object):
 
         self.label_5 = QLabel(self.frame_6)
         self.label_5.setObjectName(u"label_5")
+        self.label_5.setStyleSheet(u"font: 75 12pt \"Consolas\";")
 
         self.gridLayout.addWidget(self.label_5, 0, 2, 1, 1, Qt.AlignHCenter)
 
@@ -1014,12 +1023,14 @@ class Ui_MainWindow(object):
         self.verticalLayout_33.setObjectName(u"verticalLayout_33")
         self.label = QLabel(self.frame_3)
         self.label.setObjectName(u"label")
-        self.label.setStyleSheet(u"font: 10pt \"Times New Roman\";")
+        self.label.setStyleSheet(u"font: 75 14pt \"Times New Roman\";")
 
         self.verticalLayout_33.addWidget(self.label)
 
         self.Btn_generate = QPushButton(self.frame_3)
         self.Btn_generate.setObjectName(u"Btn_generate")
+        self.Btn_generate.setStyleSheet(u"background-color:rgb(50, 205, 50);\n"
+"font: 63 12pt \"Fira Code SemiBold\"")
 
         self.verticalLayout_33.addWidget(self.Btn_generate)
 
@@ -1089,7 +1100,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 248, 3100))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 482, 3100))
         self.verticalLayout_25 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_25.setSpacing(0)
         self.verticalLayout_25.setObjectName(u"verticalLayout_25")

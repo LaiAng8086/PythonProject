@@ -11,6 +11,7 @@ import ui_page_3
 import ui_page_4
 import load_in
 import save_png
+import ui_stackedwidget
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     MainWindow = QMainWindow()
@@ -66,6 +67,8 @@ if __name__ == "__main__":
     ui_page_4.get_ui(ui)
     ui_page_4.setup()
     save_png.get_ui(ui)
+    ui_stackedwidget.get_ui(ui)
+    ui.stackedWidget.currentChanged.connect(ui_stackedwidget.cur_index)
     loadJsonStyle(MainWindow, ui)
     ui.stackedWidget.setCurrentIndex(0)
     MainWindow.show()

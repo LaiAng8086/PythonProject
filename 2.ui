@@ -150,21 +150,20 @@ QRadioButton::indicator:checked {
 
 /* COMBOBOX */
 QComboBox{
-	background-color: rgb(27, 29, 35);
+	background-color: rgb(255, 255, 255);
 	border-radius: 5px;
-	border: 2px solid rgb(27, 29, 35);
+	border: 2px solid rgb(255, 255, 255);
 	padding: 5px;
 	padding-left: 10px;
 }
 QComboBox:hover{
-	border: 2px solid rgb(64, 71, 88);
+	border: 2px solid rgb(119, 136, 153);
+    border-left-color: rgb(119,136, 153);
 }
 QComboBox::drop-down {
 	subcontrol-origin: padding;
 	subcontrol-position: top right;
 	width: 25px; 
-	border-left-width: 3px;
-	border-left-color: rgba(39, 44, 54, 150);
 	border-left-style: solid;
 	border-top-right-radius: 3px;
 	border-bottom-right-radius: 3px;	
@@ -173,10 +172,10 @@ QComboBox::drop-down {
 	background-repeat: no-reperat;
  }
 QComboBox QAbstractItemView {
-	color: rgb(85, 170, 255);	
-	background-color: rgb(27, 29, 35);
+	color: rgb(255, 255, 255);	
+	background-color: rgb(70, 130, 180);
 	padding: 10px;
-	selection-background-color: rgb(39, 44, 54);
+	selection-background-color: rgb(25, 25, 112);
 }
 
 /* SLIDERS */
@@ -626,7 +625,8 @@ QToolButton:pressed {
           </sizepolicy>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(135, 206, 250);</string>
+          <string notr="true">background-color: rgb(0, 191, 235);
+color: rgb(255,255,255)</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
@@ -653,7 +653,7 @@ QToolButton:pressed {
           <item>
            <widget class="QFrame" name="frame_top">
             <property name="styleSheet">
-             <string notr="true">color:rgb(0, 0, 0)</string>
+             <string notr="true">color:rgb(255, 255, 255)</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -1571,6 +1571,9 @@ QPushButton:pressed {
                 <layout class="QVBoxLayout" name="verticalLayout_6">
                  <item>
                   <widget class="QFrame" name="frame_7">
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255,255,255)</string>
+                   </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -1580,6 +1583,9 @@ QPushButton:pressed {
                    <layout class="QVBoxLayout" name="verticalLayout_7">
                     <item>
                      <widget class="QFrame" name="frame_6">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(255, 255, 255)</string>
+                      </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -1587,8 +1593,14 @@ QPushButton:pressed {
                        <enum>QFrame::Raised</enum>
                       </property>
                       <layout class="QGridLayout" name="gridLayout">
+                       <property name="leftMargin">
+                        <number>11</number>
+                       </property>
                        <item row="0" column="6" alignment="Qt::AlignHCenter">
                         <widget class="QLabel" name="label_33">
+                         <property name="styleSheet">
+                          <string notr="true">font: 75 12pt &quot;Consolas&quot;;</string>
+                         </property>
                          <property name="text">
                           <string>Chart Type</string>
                          </property>
@@ -1599,6 +1611,9 @@ QPushButton:pressed {
                        </item>
                        <item row="0" column="5" alignment="Qt::AlignHCenter">
                         <widget class="QLabel" name="label_34">
+                         <property name="styleSheet">
+                          <string notr="true">font: 75 12pt &quot;Consolas&quot;;</string>
+                         </property>
                          <property name="text">
                           <string>Factor</string>
                          </property>
@@ -1606,6 +1621,9 @@ QPushButton:pressed {
                        </item>
                        <item row="0" column="4" alignment="Qt::AlignHCenter">
                         <widget class="QLabel" name="label_7">
+                         <property name="styleSheet">
+                          <string notr="true">font: 75 12pt &quot;Consolas&quot;;</string>
+                         </property>
                          <property name="text">
                           <string>Sex</string>
                          </property>
@@ -1616,6 +1634,9 @@ QPushButton:pressed {
                        </item>
                        <item row="0" column="3" alignment="Qt::AlignHCenter">
                         <widget class="QLabel" name="label_6">
+                         <property name="styleSheet">
+                          <string notr="true">font: 75 12pt &quot;Consolas&quot;;</string>
+                         </property>
                          <property name="text">
                           <string>Nationality</string>
                          </property>
@@ -1629,6 +1650,9 @@ QPushButton:pressed {
                        </item>
                        <item row="0" column="1" alignment="Qt::AlignHCenter">
                         <widget class="QLabel" name="label_32">
+                         <property name="styleSheet">
+                          <string notr="true">font: 75 12pt &quot;Consolas&quot;;</string>
+                         </property>
                          <property name="text">
                           <string>Class</string>
                          </property>
@@ -1639,6 +1663,9 @@ QPushButton:pressed {
                        </item>
                        <item row="0" column="2" alignment="Qt::AlignHCenter">
                         <widget class="QLabel" name="label_5">
+                         <property name="styleSheet">
+                          <string notr="true">font: 75 12pt &quot;Consolas&quot;;</string>
+                         </property>
                          <property name="text">
                           <string>Academic Year</string>
                          </property>
@@ -1662,7 +1689,7 @@ QPushButton:pressed {
                        <item>
                         <widget class="QLabel" name="label">
                          <property name="styleSheet">
-                          <string notr="true">font: 10pt &quot;Times New Roman&quot;;</string>
+                          <string notr="true">font: 75 14pt &quot;Times New Roman&quot;;</string>
                          </property>
                          <property name="text">
                           <string>Notice:
@@ -1673,6 +1700,10 @@ QPushButton:pressed {
                        </item>
                        <item>
                         <widget class="QPushButton" name="Btn_generate">
+                         <property name="styleSheet">
+                          <string notr="true">background-color:rgb(50, 205, 50);
+font: 63 12pt &quot;Fira Code SemiBold&quot;</string>
+                         </property>
                          <property name="text">
                           <string>Generate Diagram!</string>
                          </property>
@@ -1788,7 +1819,7 @@ QPushButton:pressed {
                            <rect>
                             <x>0</x>
                             <y>0</y>
-                            <width>248</width>
+                            <width>482</width>
                             <height>3100</height>
                            </rect>
                           </property>
