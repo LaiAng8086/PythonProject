@@ -5,7 +5,6 @@ import csv_read
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from PySide2.QtCharts import *
-import save_png
 
 
 def get_ui(input):

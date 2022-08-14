@@ -55,6 +55,7 @@ if __name__ == "__main__":
     ]
     csv_read.read_csv()
     ui.Btn_export.clicked.connect(save_png.export_png)
+    # ui.Btn_export.setVisible(False)
     ui.Btn_export.setDisabled(True)
     load_in.get_ui(ui)
     load_in.setup_event()

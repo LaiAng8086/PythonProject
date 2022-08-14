@@ -1,18 +1,13 @@
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from importlib.abc import PathEntryFinder
-from pickletools import uint1
 from PySide2.QtCore import QPointF
 from PySide2.QtCore import Qt
 from PySide2.QtCharts import QtCharts
 from PySide2.QtWidgets import *
 from PySide2.QtGui import *
 from PySide2.QtCore import *
-from functools import partial
 import random
-import csv_read
-import time
-import copy
 import matplotlib
 import save_png
 matplotlib.use("Qt5Agg")
@@ -42,6 +37,7 @@ class my_normal_chart(QObject):
 
     def change_size(self):
         if(not self.size_type):
+            # self.ui.Btn_export.setVisible(True)
             self.ui.Btn_export.setDisabled(False)
             save_png.set_chartview(self.cv)
             self.formx = self.parent_frame.frameSize().width()
@@ -54,6 +50,7 @@ class my_normal_chart(QObject):
             self.parent_frame.raise_()
             self.size_type = True
         else:
+            # self.ui.Btn_export.setVisible(False)
             self.ui.Btn_export.setDisabled(True)
             self.parent_frame.setGeometry(
                 self.posx, self.posy, self.formx, self.formy)

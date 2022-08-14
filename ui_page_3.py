@@ -98,7 +98,7 @@ def setup_radar():
             'ParentAnsweringSurvey', 'ParentschoolSatisfaction']
     theta = np.linspace(0, 2*np.pi, len(name), endpoint=False)  # 将圆根据标签的个数等比分
     value = np.array([0.635367, 0.124029, 0.083288,
-                     0.089499, 0.039189])  # 在60-120内，随机取5个数
+                     0.089499, 0.039189])
     theta = np.concatenate((theta, [theta[0]]))  # 闭合
     value = np.concatenate((value, [value[0]]))  # 闭合
     name = np.concatenate((name, [name[0]]))

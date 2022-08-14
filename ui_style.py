@@ -430,7 +430,7 @@ class Ui_MainWindow(object):
         self.frame_content.setObjectName(u"frame_content")
         sizePolicy.setHeightForWidth(self.frame_content.sizePolicy().hasHeightForWidth())
         self.frame_content.setSizePolicy(sizePolicy)
-        self.frame_content.setStyleSheet(u"background-color: rgb(0, 191, 235);\n"
+        self.frame_content.setStyleSheet(u"background-color: rgb(30, 144, 255);\n"
 "color: rgb(255,255,255)")
         self.frame_content.setFrameShape(QFrame.NoFrame)
         self.frame_content.setFrameShadow(QFrame.Raised)
@@ -575,12 +575,15 @@ class Ui_MainWindow(object):
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.page_1 = QWidget()
         self.page_1.setObjectName(u"page_1")
+        self.page_1.setStyleSheet(u"")
         self.gridLayout_2 = QGridLayout(self.page_1)
         self.gridLayout_2.setSpacing(0)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
         self.frame_10 = QFrame(self.page_1)
         self.frame_10.setObjectName(u"frame_10")
+        self.frame_10.setStyleSheet(u"color: rgb(255, 255, 255);\n"
+"font: 75 10pt \"Georgia\";")
         self.frame_10.setFrameShape(QFrame.StyledPanel)
         self.frame_10.setFrameShadow(QFrame.Raised)
         self.gridLayout_3 = QGridLayout(self.frame_10)
@@ -602,6 +605,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv15 = QtCharts.QChartView(self.frame_25)
         self.pg1_gv15.setObjectName(u"pg1_gv15")
+        self.pg1_gv15.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_23.addWidget(self.pg1_gv15)
 
@@ -623,6 +629,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv8 = QtCharts.QChartView(self.frame_18)
         self.pg1_gv8.setObjectName(u"pg1_gv8")
+        self.pg1_gv8.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_16.addWidget(self.pg1_gv8)
 
@@ -644,6 +653,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv12 = QtCharts.QChartView(self.frame_22)
         self.pg1_gv12.setObjectName(u"pg1_gv12")
+        self.pg1_gv12.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_20.addWidget(self.pg1_gv12)
 
@@ -665,6 +677,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv13 = QtCharts.QChartView(self.frame_23)
         self.pg1_gv13.setObjectName(u"pg1_gv13")
+        self.pg1_gv13.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_21.addWidget(self.pg1_gv13)
 
@@ -686,6 +701,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv14 = QtCharts.QChartView(self.frame_24)
         self.pg1_gv14.setObjectName(u"pg1_gv14")
+        self.pg1_gv14.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_22.addWidget(self.pg1_gv14)
 
@@ -707,6 +725,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv4 = QtCharts.QChartView(self.frame_14)
         self.pg1_gv4.setObjectName(u"pg1_gv4")
+        self.pg1_gv4.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_12.addWidget(self.pg1_gv4)
 
@@ -728,6 +749,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv9 = QtCharts.QChartView(self.frame_19)
         self.pg1_gv9.setObjectName(u"pg1_gv9")
+        self.pg1_gv9.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_17.addWidget(self.pg1_gv9)
 
@@ -749,6 +773,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv2 = QtCharts.QChartView(self.frame_12)
         self.pg1_gv2.setObjectName(u"pg1_gv2")
+        self.pg1_gv2.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_10.addWidget(self.pg1_gv2)
 
@@ -770,6 +797,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv7 = QtCharts.QChartView(self.frame_17)
         self.pg1_gv7.setObjectName(u"pg1_gv7")
+        self.pg1_gv7.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_15.addWidget(self.pg1_gv7)
 
@@ -778,6 +808,7 @@ class Ui_MainWindow(object):
 
         self.frame_11 = QFrame(self.frame_10)
         self.frame_11.setObjectName(u"frame_11")
+        self.frame_11.setStyleSheet(u"")
         self.frame_11.setFrameShape(QFrame.StyledPanel)
         self.frame_11.setFrameShadow(QFrame.Raised)
         self.verticalLayout_9 = QVBoxLayout(self.frame_11)
@@ -791,6 +822,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv1 = QtCharts.QChartView(self.frame_11)
         self.pg1_gv1.setObjectName(u"pg1_gv1")
+        self.pg1_gv1.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_9.addWidget(self.pg1_gv1)
 
@@ -812,6 +846,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv10 = QtCharts.QChartView(self.frame_20)
         self.pg1_gv10.setObjectName(u"pg1_gv10")
+        self.pg1_gv10.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_18.addWidget(self.pg1_gv10)
 
@@ -833,6 +870,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv16 = QtCharts.QChartView(self.frame_26)
         self.pg1_gv16.setObjectName(u"pg1_gv16")
+        self.pg1_gv16.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_24.addWidget(self.pg1_gv16)
 
@@ -854,6 +894,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv6 = QtCharts.QChartView(self.frame_16)
         self.pg1_gv6.setObjectName(u"pg1_gv6")
+        self.pg1_gv6.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_14.addWidget(self.pg1_gv6)
 
@@ -875,6 +918,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv5 = QtCharts.QChartView(self.frame_15)
         self.pg1_gv5.setObjectName(u"pg1_gv5")
+        self.pg1_gv5.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_13.addWidget(self.pg1_gv5)
 
@@ -896,6 +942,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv11 = QtCharts.QChartView(self.frame_21)
         self.pg1_gv11.setObjectName(u"pg1_gv11")
+        self.pg1_gv11.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_19.addWidget(self.pg1_gv11)
 
@@ -917,6 +966,9 @@ class Ui_MainWindow(object):
 
         self.pg1_gv3 = QtCharts.QChartView(self.frame_13)
         self.pg1_gv3.setObjectName(u"pg1_gv3")
+        self.pg1_gv3.setStyleSheet(u"QFrame:hover{\n"
+"	border: 1px solid rgb(0, 0, 128);\n"
+"}")
 
         self.verticalLayout_11.addWidget(self.pg1_gv3)
 
@@ -1088,6 +1140,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_29.sizePolicy().hasHeightForWidth())
         self.frame_29.setSizePolicy(sizePolicy)
         self.frame_29.setMinimumSize(QSize(525, 0))
+        self.frame_29.setStyleSheet(u"font: 75 10pt \"Cambria\";\n"
+"color: rgb(255, 255, 255);")
         self.frame_29.setFrameShape(QFrame.StyledPanel)
         self.frame_29.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_13 = QHBoxLayout(self.frame_29)
@@ -1100,7 +1154,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 482, 3100))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 242, 3100))
         self.verticalLayout_25 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_25.setSpacing(0)
         self.verticalLayout_25.setObjectName(u"verticalLayout_25")
@@ -1342,14 +1396,18 @@ class Ui_MainWindow(object):
 
         self.status_label = QLabel(self.frame_bottom)
         self.status_label.setObjectName(u"status_label")
-        self.status_label.setStyleSheet(u"font: 13pt \"Times New Roman\";")
+        self.status_label.setStyleSheet(u"font: 13pt \"Times New Roman\";\n"
+"color: rgb(255, 255, 255);")
 
         self.horizontalLayout_11.addWidget(self.status_label)
 
         self.Btn_export = QPushButton(self.frame_bottom)
         self.Btn_export.setObjectName(u"Btn_export")
         self.Btn_export.setEnabled(False)
-        self.Btn_export.setStyleSheet(u"QPushButton:disabled{\n"
+        self.Btn_export.setStyleSheet(u"QPushButton{\n"
+"	color: rgb(255,255,255)\n"
+"}\n"
+"QPushButton:disabled{\n"
 "	color: rgb(109,109,109)\n"
 "}")
 
@@ -1368,7 +1426,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1377,9 +1435,9 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.Btn_1.setText(QCoreApplication.translate("MainWindow", u"Data Summary", None))
-        self.Btn_2.setText(QCoreApplication.translate("MainWindow", u"Score Analysis", None))
+        self.Btn_2.setText(QCoreApplication.translate("MainWindow", u"Selected Display", None))
         self.Btn_3.setText(QCoreApplication.translate("MainWindow", u"Feature Analysis", None))
-        self.Btn_4.setText(QCoreApplication.translate("MainWindow", u"Feature Correlation", None))
+        self.Btn_4.setText(QCoreApplication.translate("MainWindow", u"Factor Correlation", None))
         self.toolButton.setText(QCoreApplication.translate("MainWindow", u"...", None))
         self.label_filepath.setText(QCoreApplication.translate("MainWindow", u"- - - - - -", None))
         self.label_35.setText(QCoreApplication.translate("MainWindow", u"Choose the data file to load", None))
@@ -1424,7 +1482,7 @@ class Ui_MainWindow(object):
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"Impact Of ParentAnsweringSurvey On Class", None))
         self.impact_label_1.setText(QCoreApplication.translate("MainWindow", u"Impact Of ParentschoolSatisfaction", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"Impact Of StudentAbsenceDays", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Python Project By jyz,wxg,jrt & ljh!", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Python Project By jyz,wxg & jrt!", None))
         self.status_label.setText(QCoreApplication.translate("MainWindow", u"Status: Data not loaded yet!", None))
         self.Btn_export.setText(QCoreApplication.translate("MainWindow", u"Export to PNG!", None))
     # retranslateUi
